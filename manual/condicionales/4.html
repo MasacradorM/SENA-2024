@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let areaC1;
+        let areaC2;
+        let areaC3;
+        let lado1 = 3;
+        let lado2 = 4;
+        let lado3 = 5;
+
+        areaC1 = lado1 * lado1;
+        areaC2 = lado2 * lado2;
+        areaC3 = lado3 * lado3;
+
+        
+        if(areaC1==areaC2 && areaC2==areaC3){
+            console.log("Son iguales");
+        }
+        else if(areaC1>areaC2 && areaC1>areaC3){
+            console.log("El area del primer cuadrado es mayor");
+        }
+        else if(areaC2>areaC3){
+            console.log("El area del segundo cuadrado es mayor");
+        }
+        else{
+            console.log("El area del tercer  cuadrado es mayor");
+        }
+    </script>
+</body>
+</html>

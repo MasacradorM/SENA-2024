@@ -1,0 +1,31 @@
+
+.bordes{
+    margin-top: 50px !important;
+    border: 2px solid black;
+    padding: 4px;
+    border-radius: 15px;
+}
+
+.espacio{
+    margin-top: 20px;
+}
+h3{
+    margin-top: 10px;
+    background-color: rgb(205, 224, 240);
+    text-align: center;
+}
+.borde{
+    background-color: aliceblue;
+    border: 1px solid black; 
+    margin: 1px;
+}
+
+.col-3{
+    width: 20%;
+
+}
+
+.h6{
+    margin-left: -9px !important;
+    color: rgb(165, 204, 191);
+}

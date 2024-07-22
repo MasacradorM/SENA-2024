@@ -1,0 +1,12 @@
+
+.container{
+    width: 100%;
+}
+.sec1{
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 35%;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 15px;
+}

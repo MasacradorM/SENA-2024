@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/bingo.js"></script>
+    <script src="js/bingoCompleto.js"></script>
+
+</head>
+<body >
+    <div class="container" onclick="Cbingo()">
+        <strong><h1>BINGO</h1></strong>               
+        <div class="col-12 row " >
+
+            <div class="col-5 borde blancoT" id="r"></div>
+            <div class="col-2"></div>
+            <div class="col-5 borde blancoT" id="r1"></div>
+            <div class="col-5 borde blancoT" id="r2"></div>
+            <div class="col-2"></div>
+            <div class="col-5 borde blancoT" id="r3"></div>
+<!-- 
+            <div class="col-6" onclick="Cbingo()">
+                <div class="col-12  borde blancoT">
+                    <div class="col-12 row " >
+                        <div class="col-1 aumento"></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>B</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>I</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>N</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>G</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>O</strong></div></div>
+                        <div class="col-1"></div>
+                        <div class="col-12 row margen-col-12" id="txtR">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-6" onclick="Cbingo()">
+                <div class="col-12  borde blancoT">
+                    <div class="col-12 row " >
+                        <div class="col-1 aumento"></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>B</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>I</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>N</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>G</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>O</strong></div></div>
+                        <div class="col-1"></div>
+                        <div class="col-12 row margen-col-12" id="txtR2">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-6" onclick="Cbingo()">
+                <div class="col-12  borde blancoT">
+                    <div class="col-12 row " >
+                        <div class="col-1 aumento"></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>B</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>I</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>N</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>G</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>O</strong></div></div>
+                        <div class="col-1"></div>
+                        <div class="col-12 row margen-col-12" id="txtR3">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-6" onclick="Cbingo()">
+                <div class="col-12  borde blancoT">
+                    <div class="col-12 row " >
+                        <div class="col-1 aumento"></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>B</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>I</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>N</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>G</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>O</strong></div></div>
+                        <div class="col-1"></div>
+                        <div class="col-12 row margen-col-12" id="txtR4">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-6" onclick="Cbingo()">
+                <div class="col-12  borde blancoT">
+                    <div class="col-12 row " >
+                        <div class="col-1 aumento"></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>B</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>I</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>N</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>G</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>O</strong></div></div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="col-12 row margen-col-12" id="txtR2" >
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6" onclick="Cbingo()">
+                <div class="col-12  borde blancoT">
+                    <div class="col-12 row " >
+                        <div class="col-1 aumento"></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>B</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>I</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>N</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>G</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>O</strong></div></div>
+                        <div class="col-1"></div>
+                        <div class="col-12 row margen-col-12" id="txtR3">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-6" onclick="Cbingo()">
+                <div class="col-12  borde blancoT">
+                    <div class="col-12 row " >
+                        <div class="col-1 aumento"></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>B</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>I</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>N</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>G</strong></div></div>
+                        <div class="col-2 espace"><div class="bordeado"><strong>O</strong></div></div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="col-12 row margen-col-12" id="txtR4" >
+
+                    </div>
+                </div>
+
+            </div>
+        -->
+        </div>
+    </div>
+
+</body>
+</html>

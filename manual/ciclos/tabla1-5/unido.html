@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas del 1 al 5 ciclo for</title>
+</head>
+<body>
+    <script>
+        let pares;
+        let impares;
+        let limite = 5;
+        let tabla =  0;
+        let num;
+        let resultado;
+
+        while(tabla<limite){
+            tabla = tabla + 1;
+            pares = 0;
+            impares = 0;
+            for(num=1;num<=limite;num = num + 1){
+                resultado = tabla * num;
+                if(resultado%2==0){
+                    pares= pares + 1;
+                    console.log(tabla+" X "+num+" = "+resultado+" Buzz");
+                }
+                else{
+                    impares = impares + 1;
+                    console.log(tabla+" X "+num+" = "+resultado+" Bass");
+                }
+
+            }
+            console.log("En la del "+tabla+" hay "+pares+" numeros páres");
+            console.log("En la del "+tabla+" hay "+impares+" numeros impáres");
+        }
+    </script>
+</body>
+</html>

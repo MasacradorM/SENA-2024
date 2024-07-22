@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla del 9 ciclo while</title>
+</head>
+<body>
+    <script>
+        let tabla = 9;
+        let limite = 5;
+        let num = 0;
+        let resultado;
+
+        while(num<limite){
+            num = num + 1;
+            resultado = tabla * num;
+                if(resultado%2==0){
+                    console.log(tabla+" X "+num+" = "+resultado+" Es par");
+                }
+                else{
+                    console.log(tabla+" X "+num+" = "+resultado+" Es impar");
+                }
+        }
+    </script>
+</body>
+</html>

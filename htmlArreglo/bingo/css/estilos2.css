@@ -1,0 +1,68 @@
+
+body{
+    background-image: url(../img/bambu1.png);
+
+    background-size: 100%;
+}
+h1{
+    text-align: center;
+    color: azure !important;
+    font-family: Arial;
+    font-size: larger;
+}
+.borde{
+    border: 3px double rgb(0, 161, 48);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.tamano{
+    width: 16.5% !important;
+    margin-bottom: 20px !important;
+    margin-right: 9px;
+    
+    text-align: center;
+}
+.col-2{
+    width: 16.66666667% !important;
+}
+.circulo{
+    border: 2px solid black;
+    font-size: xx-large;
+    border-radius: 25px;
+    width: 55.98px;
+}
+.color0{
+    background-color: rgb(0, 255, 255);
+}
+.color1{
+    background-color: rgb(104, 255, 205);
+}
+.color2{
+    background-color: rgb(22, 226, 158);
+}
+.color3{
+    background-color: rgb(12, 218, 22);
+}
+.color4{
+    background-color: rgb(121, 196, 0);
+}
+.colorAm{
+    background-color: yellow;
+}
+.colorAz{
+    background-color: blue;
+}
+.colorR{
+    background-color: red;
+}
+.blanco{
+    background-color: rgb(255, 255, 255);
+}
+.blancoT{
+    background-image: url(../img/img.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomina</title>
+</head>
+<body>
+    <script>
+        let salud;
+        let arl;
+        let pension;
+        let salario;
+        let totalPagar;
+        let subTransporte;
+        let retencion;
+        let valorDia = 130000;
+        let diasTrabajados = 30;
+        let deducciones;
+
+        salario = valorDia * diasTrabajados;
+        salud = salario * 0.12;
+        pension = salario * 0.16;
+        arl = salario * 0.052;
+        deducciones = salud + pension + arl;
+        if(salud>4600000){
+            retencion = salud * 0.04;
+        }
+        else{
+            retencion = 0;
+        }
+        if(salud<2300000){
+            subTransporte = 162000;
+        }
+        else{
+            subTransporte = 0;
+        }
+        totalPagar = salario + subTransporte - deducciones - retencion;
+
+        console.log(salud);
+        console.log(pension);
+        console.log(arl);
+        console.log(subTransporte);
+        console.log(retencion);
+        console.log(totalPagar);
+    </script>
+</body>
+</html>
