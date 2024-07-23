@@ -5,62 +5,62 @@
 function Cbingo(){
     let bingo = [];
     let filas = [];
-    let i = 0;
-    let j;
     let nBingo;
     let resultado;
     let resultado2;
     let resultado3;
-    let resultado4;
-
-
-    for(i=0;i<5;i++){
+    let resultado4; 
+    // Creacion del arrreglo del bingo    
+    for(let iteracion=0;iteracion<5;iteracion++){
         filas = [];
-        j = 0;
-        for(j=0;j<5;j++){
+         let iteracion2 = 0;
+        for(iteracion2=0;iteracion2<5;iteracion2++){
             nBingo = Math.floor(Math.random()*98)+1;
-            filas[j]=nBingo;                                        
+            filas[iteracion2]=nBingo;                                        
         }
-        bingo[i]=filas;
+        bingo[iteracion]=filas;
 
     }
-    for(i=0;i<5;i++){
+    // se recorre el arreglo para mostrar el bingo en el index - Bingo normal
+    for(iteracion=0;iteracion<5;iteracion++){
 
         resultado += "<div class='col-12 row'>";
 
-        for(j=0;j<5;j++){
+        for(iteracion2=0;iteracion2<5;iteracion2++){
 
-            resultado += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            resultado += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
         }
 
         resultado += "</div>";
 
     }
     document.getElementById('txtR').innerHTML=resultado;
-    for(i=0;i<5;i++){
+    // Bingo - letras
+    for(iteracion=0;iteracion<5;iteracion++){
 
         resultado2 += "<div class='col-12 row'>";
 
-        for(j=0;j<5;j++){
+        for(iteracion2=0;iteracion2<5;iteracion2++){
 
-            resultado2 += "<div class='col-2 tamano'>" + "<div class='circulo color"+ j +"'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            resultado2 += "<div class='col-2 tamano'>" + "<div class='circulo color"+ iteracion2 +"'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
         }
 
         resultado2 += "</div>";
 
     }
     document.getElementById('txtR2').innerHTML=resultado2;
-    for(i=0;i<5;i++){
+    // Bingo - X grande 
+    for(iteracion=0;iteracion<5;iteracion++){
 
         resultado3 += "<div class='col-12 row'>";
 
-        for(j=0;j<5;j++){
+        for(iteracion2=0;iteracion2<5;iteracion2++){
 
-            if(i==0&&j==0||i==0&&j==4||i==1&&j==1||i==1&&j==3||i==2&&j==2||i==3&&j==1||i==3&&j==3||i==4&&j==0||i==4&&j==4){
-                resultado3 += "<div class='col-2 tamano'>" + "<div class='circulo colorR'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            if(iteracion == iteracion2 || bingo.length-1 == iteracion + iteracion2){
+                resultado3 += "<div class='col-2 tamano'>" + "<div class='circulo colorR'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
             else{
-                resultado3 += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+                resultado3 += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
         }
 
@@ -68,26 +68,27 @@ function Cbingo(){
 
     }
     document.getElementById('txtR3').innerHTML=resultado3;
-    for(i=0;i<5;i++){
+    // Bingo - 3X pequeñas 
+    for(iteracion=0;iteracion<5;iteracion++){
 
         resultado4 += "<div class='col-12 row'>";
 
-        for(j=0;j<5;j++){
+        for(iteracion2=0;iteracion2<5;iteracion2++){
 
-            if(i==0&&j==0||i==1&&j==1||i==2&&j==0){
-                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorAm'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            if(iteracion==0&&iteracion2==0||iteracion==1&&iteracion2==1||iteracion==2&&iteracion2==0){
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorAm'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
-            else if(i==0&&j==2||i==2&&j==2){
-                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorVe'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            else if(iteracion==0&&iteracion2==2||iteracion==2&&iteracion2==2){
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorVe'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
-            else if(i==2&&j==4||i==0&&j==4||i==1&&j==3){
-                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorAz'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            else if(iteracion==2&&iteracion2==4||iteracion==0&&iteracion2==4||iteracion==1&&iteracion2==3){
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorAz'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
-            else if(i==3&&j==2||i==4&&j==1||i==4&&j==3||i==2&&j==3||i==2&&j==1){
-                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorR'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            else if(iteracion==3&&iteracion2==2||iteracion==4&&iteracion2==1||iteracion==4&&iteracion2==3||iteracion==2&&iteracion2==3||iteracion==2&&iteracion2==1){
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorR'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
             else{
-                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
         }
 
@@ -102,13 +103,13 @@ function Cbingo(){
 
 
 /*
-    for(i=0;i<5;i++){
+    for(iteracion=0;i<5;i++){
 
         resultado2 += "<div class='col-12 row controlP'>";
 
-        for(j=0;j<5;j++){
+        for(iteracion2=0;iteracion2<5;iteracion2++){
 
-            resultado2 += "<div class='col-2 tamano'>" + "<div class='circulo color"+ j +"'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            resultado2 += "<div class='col-2 tamano'>" + "<div class='circulo color"+ iteracion2 +"'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
         }
 
         resultado2 += "</div>";
@@ -117,16 +118,16 @@ function Cbingo(){
     document.getElementById('txtR2').innerHTML=resultado2;
 
 
-    for(i=0;i<5;i++){
+    for(iteracion=0;i<5;i++){
 
         resultado3 += "<div class='col-12 row'>";
 
-        for(j=0;j<5;j++){
-            if(i==0&&j==0||i==0&&j==4||i==1&&j==1||i==1&&j==3||i==2&&j==2||i==3&&j==1||i==3&&j==3||i==4&&j==0||i==4&&j==4){
-                resultado3 += "<div class='col-2 tamano'>" + "<div class='circulo colorR'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+        for(iteracion2=0;iteracion2<5;iteracion2++){
+            if(iteracion==0&&iteracion2==0||iteracion==0&&iteracion2==4||iteracion==1&&iteracion2==1||iteracion==1&&iteracion2==3||iteracion==2&&iteracion2==2||iteracion==3&&iteracion2==1||iteracion==3&&iteracion2==3||iteracion==4&&iteracion2==0||iteracion==4&&iteracion2==4){
+                resultado3 += "<div class='col-2 tamano'>" + "<div class='circulo colorR'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
             else{
-                resultado3 += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+                resultado3 += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
 
 
@@ -138,26 +139,26 @@ function Cbingo(){
     }
     document.getElementById('txtR3').innerHTML=resultado3;
 
-    for(i=0;i<5;i++){
+    for(iteracion=0;i<5;i++){
 
         resultado4 += "<div class='col-12 row controlP'>";
 
-        for(j=0;j<5;j++){
+        for(iteracion2=0;iteracion2<5;iteracion2++){
 
-            if(i==0&&j==0||i==1&&j==1||i==2&&j==0){
-                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorAm'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            if(iteracion==0&&iteracion2==0||iteracion==1&&iteracion2==1||iteracion==2&&iteracion2==0){
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorAm'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
-            else if(i==0&&j==2||i==2&&j==2){
-                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorVe'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            else if(iteracion==0&&iteracion2==2||iteracion==2&&iteracion2==2){
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorVe'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
-            else if(i==2&&j==4||i==0&&j==4||i==1&&j==3){
-                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorAz'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            else if(iteracion==2&&iteracion2==4||iteracion==0&&iteracion2==4||iteracion==1&&iteracion2==3){
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorAz'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
-            else if(i==3&&j==2||i==4&&j==1||i==4&&j==3||i==2&&j==3||i==2&&j==1){
-                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorR'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+            else if(iteracion==3&&iteracion2==2||iteracion==4&&iteracion2==1||iteracion==4&&iteracion2==3||iteracion==2&&iteracion2==3||iteracion==2&&iteracion2==1){
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorR'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
             else{
-                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [i][j] + "</strong>" + "</div>" +  "</div>";
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
         }
 
