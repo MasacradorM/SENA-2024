@@ -75,6 +75,20 @@ function Cbingo(){
 
         for(iteracion2=0;iteracion2<5;iteracion2++){
 
+            if((iteracion+iteracion2)%2==0 && iteracion <=2){
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorR'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
+            }
+            else if((iteracion+iteracion2)%2==1 && iteracion >=2 && iteracion2 != 0 && iteracion2 != 4){
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorAz'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
+            }
+            else{
+                resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
+            }
+/**
+ * 
+ *             
+
+
             if(iteracion==0&&iteracion2==0||iteracion==1&&iteracion2==1||iteracion==2&&iteracion2==0){
                 resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo colorAm'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
@@ -90,6 +104,8 @@ function Cbingo(){
             else{
                 resultado4 += "<div class='col-2 tamano'>" + "<div class='circulo blanco'>" + "<strong>" +  bingo [iteracion][iteracion2] + "</strong>" + "</div>" +  "</div>";
             }
+
+             */
         }
 
         resultado4 += "</div>";
