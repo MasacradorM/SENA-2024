@@ -15,7 +15,7 @@ function Cbingo(){
         filas = [];
          let iteracion2 = 0;
         for(iteracion2=0;iteracion2<5;iteracion2++){
-            nBingo = (iteracion + 1) * (iteracion2 + 1) ; // Math.floor(Math.random()*98)+1;
+            nBingo = (iteracion + 1) * (iteracion2 + 1) ; // Math.floor(Math.random()*98)+1 ; numeros aleatorios que se repiten
             filas[iteracion2]=nBingo;                                        
         }
         bingo[iteracion]=filas;
